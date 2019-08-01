@@ -10,7 +10,7 @@
 createTestAndTrainSamples <- function(dataset, y_var) {
   set.seed(12345)
   
-  dataset[y_var] <- as.integer(dataset[y_var])
+  dataset[y_var] <- as.integer(unlist(dataset[y_var]))
   
   index <- caret::createDataPartition(dataset[y_var], p = 0.7, list = FALSE)
   data.train <- dataset[index, ]
