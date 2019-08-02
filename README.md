@@ -4,8 +4,7 @@ R package to power-up FGVs analysis based on learned techniques in the MBA cours
 > Don't panic!
 > --Douglas Adams on "The Hitchhiker's Guide to the Galaxy" book
 
-The premise of fgvr package is to c in the `man/` directory.  Here's a simple example from the `stringr` package:
-The premise of this package is gathering a set of R functions that helps FGV MBA students performing repetitive activities during the following steps:
+The premise of this package is gathering a set of R functions that helps FGV MBA's students performing repetitive activities during the following steps:
 
 * Data Cleaning;
 * Data Enhancements;
@@ -25,8 +24,4 @@ devtools::install_github("ldaniel/fgvr")
 
 The fgvr package has a set of handy functions:
 
-* `roxygen2::roxygenise()` just sources all files in the `R/` directory
-
-* `devtools::document()` sources all files in the `R/` directory, compiles
-  source code in the `src/` directory, loads data in the `data/` directory
-  and generally does an accurate job of simulating package loading.
+* `fgvr::createTestAndTrainSamples()` This function creates train and test datasets given a database and the Y variable.
