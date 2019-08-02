@@ -23,7 +23,7 @@ createTestAndTrainSamples <- function(dataset = dataset,
   
   dataset[[y_var]] <- as.integer(dataset[[y_var]])
   
-  # performing train and test creation with the give dataset
+  # performing train and test creation with the given dataset
   index <- caret::createDataPartition(dataset[[y_var]], p = percentage, list = FALSE)
   data.train <- dataset[index, ]
   data.test  <- dataset[-index,]
