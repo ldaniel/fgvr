@@ -7,8 +7,7 @@ Author: Leandro Daniel <contato@leandrodaniel.com>
 Maintainer: FGV MBA's students <contato@leandrodaniel.com>
 Description: R package to power-up FGVs analysis based on learned techniques in the MBA course.
 Depends:
-    R (>= 2.15),
-    qtl (>= 1.30-4)
+    R (>= 2.15)
 Imports:
     dplyr,
     caret
