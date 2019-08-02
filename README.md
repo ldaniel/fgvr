@@ -32,7 +32,8 @@ This function creates train and test datasets given a database and the Y variabl
 base <- (your code to run any desired database to a dataframe object)
 
 # calling the function by passing all parameters
-mydataset <- fgvr::createTestAndTrainSamples(dataset = base, yvar = "Name_of_your_Y_var", seed = 12345, percentage = 0.7)
+mydataset <- fgvr::createTestAndTrainSamples(dataset = base, yvar = "Name_of_your_Y_var", 
+                                             seed = 12345, percentage = 0.7)
 
 # or ommiting 'seed' and 'percentage' parameters, then the default values will be used
 # default values:
