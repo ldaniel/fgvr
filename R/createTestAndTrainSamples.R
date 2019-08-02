@@ -25,10 +25,10 @@ createTestAndTrainSamples <- function(dataset = dataset,
                                       seed = seed_number,
                                       percentage = percentage_value) {
   
+  # checking missing parameters and setting default values
   if(missing(seed)) {
     seed = 12345
-  } 
-  set.seed(seed)
+  }  
   
   if(missing(percentage)) {
     percentage = 0.7
@@ -37,6 +37,7 @@ createTestAndTrainSamples <- function(dataset = dataset,
   dataset[[y_var]] <- as.integer(dataset[[y_var]])
   
   # performing train and test creation with the given dataset
+  set.seed(seed) # keeping always the same samples
   index <- caret::createDataPartition(dataset[[y_var]], p = percentage, list = FALSE)
   data.train <- dataset[index, ]
   data.test  <- dataset[-index,]
@@ -53,6 +54,7 @@ createTestAndTrainSamples <- function(dataset = dataset,
   
   event_proportion <- select(event_proportion, scope, everything())
   
+  # creating the list with train, test and proportion results
   split_dataset <- list()
   split_dataset$data.train <- data.train
   split_dataset$data.test  <- data.test
