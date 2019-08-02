@@ -1,12 +1,23 @@
-#' Create test and train samples
+#' Create test and train samples 
 #'
-#' This function creates train and test datasets given a database.
+#' This function creates train and test datasets given a database and the Y variable.
 #' @param dataset The dataset you want to split into test and train samples.
+#' @param yvar The Y variable in your dataset.
+#' @param seed The seed number used to generate the train and test samples.
+#'        The default value is 12345.
+#' @param percentage The percentage of data that goes to training sample.
+#'        The default value is 0.7.
+#' @return An object list with the train dataset, test dataset and the proportions.
 #' @keywords dataset
 #' @export
 #' @examples
-#' createTestAndTrainSamples(my_dataset, my_y_var)
-#' 
+#' mydataset <- createTestAndTrainSamples(dataset = dataset, yvar = "Churn", seed = 12345, percentage = 0.7)
+#' # or
+#' mydataset <- createTestAndTrainSamples(dataset = dataset, yvar = "Churn")
+#' # to use the final samples and to see the proportion
+#' mydataset$data.train
+#' mydataset$data.test
+#' mydataset$event.proportion
 createTestAndTrainSamples <- function(dataset = dataset, 
                                       yvar = y_column_name, 
                                       seed = seed_number,
