@@ -35,18 +35,18 @@ createTestAndTrainSamples <- function(dataset = dataset,
     percentage = 0.7
   } 
   
-  dataset[[y_var]] <- as.integer(dataset[[y_var]])
+  dataset[[yvar]] <- as.integer(dataset[[yvar]])
   
   # performing train and test creation with the given dataset
   set.seed(seed) # keeping always the same samples
-  index <- caret::createDataPartition(dataset[[y_var]], p = percentage, list = FALSE)
+  index <- caret::createDataPartition(dataset[[yvar]], p = percentage, list = FALSE)
   data.train <- dataset[index, ]
   data.test  <- dataset[-index,]
   
   # checking event proportion in sample and test datasets against full dataset
-  event_proportion <- bind_rows(prop.table(table(dataset[[y_var]])),
-                                prop.table(table(data.train[[y_var]])),
-                                prop.table(table(data.test[[y_var]])))
+  event_proportion <- bind_rows(prop.table(table(dataset[[yvar]])),
+                                prop.table(table(data.train[[yvar]])),
+                                prop.table(table(data.test[[yvar]])))
   
   event_proportion$scope = ''
   event_proportion$scope[1] = 'full dataset'
