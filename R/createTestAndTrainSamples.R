@@ -1,6 +1,7 @@
 #' Create test and train samples 
 #'
 #' This function creates train and test datasets given a database and the Y variable.
+#' @author Rodrigo Gonçalves and Leandro Daniel
 #' @import dplyr
 #' @importFrom caret createDataPartition
 #' @param dataset The dataset you want to split into test and train samples.
