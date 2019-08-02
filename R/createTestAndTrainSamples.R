@@ -7,16 +7,28 @@
 #' @examples
 #' createTestAndTrainSamples(my_dataset, my_y_var)
 #' 
-createTestAndTrainSamples <- function(dataset, y_var) {
-  set.seed(12345)
+createTestAndTrainSamples <- function(dataset = dataset, 
+                                      yvar = y_column_name, 
+                                      seed = seed_number,
+                                      proportion = proportion_scale) {
+  
+  if(missing(seed)) {
+    seed = 12345
+  } 
+  set.seed(seed)
+  
+  if(missing(proportion)) {
+    proportion = 0.7
+  } 
   
   dataset[[y_var]] <- as.integer(dataset[[y_var]])
   
-  index <- caret::createDataPartition(dataset[[y_var]], p = 0.7, list = FALSE)
+  # performing train and test creation with the give dataset
+  index <- caret::createDataPartition(dataset[[y_var]], p = proportion, list = FALSE)
   data.train <- dataset[index, ]
   data.test  <- dataset[-index,]
   
-  # checking event proportion in sample and test datasets against full dataset.
+  # checking event proportion in sample and test datasets against full dataset
   event_proportion <- bind_rows(prop.table(table(dataset[[y_var]])),
                                 prop.table(table(data.train[[y_var]])),
                                 prop.table(table(data.test[[y_var]])))
