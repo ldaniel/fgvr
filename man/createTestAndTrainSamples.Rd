@@ -4,16 +4,36 @@
 \alias{createTestAndTrainSamples}
 \title{Create test and train samples}
 \usage{
-createTestAndTrainSamples(dataset, y_var)
+createTestAndTrainSamples(dataset = dataset, yvar = y_column_name,
+  seed = seed_number, percentage = percentage_value)
 }
 \arguments{
 \item{dataset}{The dataset you want to split into test and train samples.}
+
+\item{yvar}{The Y variable in your dataset.}
+
+\item{seed}{The seed number used to generate the train and test samples.
+The default value is 12345.}
+
+\item{percentage}{The percentage of data that goes to training sample.
+The default value is 0.7.}
+}
+\value{
+An object list with the train dataset, test dataset and the proportions.
 }
 \description{
-This function creates train and test datasets given a database.
+This function creates train and test datasets given a database and the Y variable.
 }
 \examples{
-createTestAndTrainSamples(my_dataset, my_y_var)
-
+mydataset <- createTestAndTrainSamples(dataset = dataset, yvar = "Churn", seed = 12345, percentage = 0.7)
+# or
+mydataset <- createTestAndTrainSamples(dataset = dataset, yvar = "Churn")
+# to use the final samples and to see the proportion
+mydataset$data.train
+mydataset$data.test
+mydataset$event.proportion
+}
+\author{
+Rodrigo Gonçalves and Leandro Daniel
 }
 \keyword{dataset}
