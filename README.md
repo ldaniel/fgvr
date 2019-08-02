@@ -24,4 +24,4 @@ devtools::install_github("ldaniel/fgvr")
 
 The fgvr package has a set of handy functions:
 
-* `fgvr::createTestAndTrainSamples()` This function creates train and test datasets given a database and the Y variable.
+* `fgvr::createTestAndTrainSamples()` This function creates train and test datasets given a database and the Y variable. In addition, this function also returns the sample proportion for each dataset.
