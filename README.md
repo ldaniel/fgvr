@@ -1,5 +1,5 @@
 # fgvr
-R package to power-up FGVs analysis based on learned techniques in the MBA course.
+R package to power-up data science analysis based on learned techniques in the FGV MBA course.
 
 > Don't panic!
 > --Douglas Adams on "The Hitchhiker's Guide to the Galaxy" book
