@@ -10,21 +10,21 @@
 createTestAndTrainSamples <- function(dataset = dataset, 
                                       yvar = y_column_name, 
                                       seed = seed_number,
-                                      proportion = proportion_scale) {
+                                      percentage = percentage_value) {
   
   if(missing(seed)) {
     seed = 12345
   } 
   set.seed(seed)
   
-  if(missing(proportion)) {
-    proportion = 0.7
+  if(missing(percentage)) {
+    percentage = 0.7
   } 
   
   dataset[[y_var]] <- as.integer(dataset[[y_var]])
   
   # performing train and test creation with the give dataset
-  index <- caret::createDataPartition(dataset[[y_var]], p = proportion, list = FALSE)
+  index <- caret::createDataPartition(dataset[[y_var]], p = percentage, list = FALSE)
   data.train <- dataset[index, ]
   data.test  <- dataset[-index,]
   
