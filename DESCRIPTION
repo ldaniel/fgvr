@@ -2,9 +2,21 @@ Package: fgvr
 Type: Package
 Title: FGV R
 Version: 0.1.0
-Author: Leandro Daniel
-Maintainer: Leandro Daniel & FGV MBA's students <contato@leandrodaniel.com>
+Date: 2019-08-01
+Author: Leandro Daniel <contato@leandrodaniel.com>
+Maintainer: FGV MBA's students <contato@leandrodaniel.com>
 Description: R package to power-up FGVs analysis based on learned techniques in the MBA course.
+Depends:
+    R (>= 2.15),
+    qtl (>= 1.30-4)
+Imports:
+    dplyr,
+    caret
+Suggests:
+    knitr,
+    devtools,
+    roxygen2,
+    testthat
 License: Apache License 
 Encoding: UTF-8
 LazyData: true
