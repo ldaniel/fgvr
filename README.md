@@ -41,10 +41,10 @@ base <- (your code to load any desired database to a dataframe object)
 mydataset <- fgvr::createTestAndTrainSamples(dataset = base, yvar = "Name_of_your_Y_var", 
                                              seed = 12345, percentage = 0.7)
 
-# or omitting 'seed' and 'percentage' parameters, then the default values will be used
+# or omitting 'seed' and 'percentage' parameters, then the default values will be used.
 mydataset <- fgvr::createTestAndTrainSamples(dataset = base, yvar = "Name_of_your_Y_var")
 
-# to use the final samples and to see the proportion
+# getting the final samples and proportion.
 mydataset$data.train
 mydataset$data.test
 mydataset$event.proportion
