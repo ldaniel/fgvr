@@ -1,4 +1,4 @@
-# fgvr
+# fgvr <img src='man/figures/logo.png' align="right" height="139" />
 R package to power-up data science analysis based on learned techniques in the FGV MBA course.
 
 > Don't panic!
