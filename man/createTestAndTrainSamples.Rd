@@ -4,8 +4,8 @@
 \alias{createTestAndTrainSamples}
 \title{Create test and train samples}
 \usage{
-createTestAndTrainSamples(dataset = dataset, yvar = y_column_name,
-  seed = seed_number, percentage = percentage_value)
+createTestAndTrainSamples(dataset, yvar, seed = 12345,
+  percentage = 0.7)
 }
 \arguments{
 \item{dataset}{The dataset you want to split into test and train samples.}
