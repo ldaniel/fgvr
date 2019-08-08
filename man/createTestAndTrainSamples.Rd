@@ -25,9 +25,10 @@ An object list with the train dataset, test dataset and the proportions.
 This function creates train and test datasets given a database and the Y variable.
 }
 \examples{
-mydataset <- createTestAndTrainSamples(dataset = dataset, yvar = "Churn", seed = 12345, percentage = 0.7)
+base = loansdefaulters
+mydataset <- createTestAndTrainSamples(dataset = base, yvar = "y_loan_defaulter", seed = 12345, percentage = 0.7)
 # or
-mydataset <- createTestAndTrainSamples(dataset = dataset, yvar = "Churn")
+mydataset <- createTestAndTrainSamples(dataset = base, yvar = "y_loan_defaulter")
 # to use the final samples and to see the proportion
 mydataset$data.train
 mydataset$data.test
