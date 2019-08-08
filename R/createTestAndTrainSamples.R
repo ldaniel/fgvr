@@ -21,10 +21,10 @@
 #' mydataset$data.train
 #' mydataset$data.test
 #' mydataset$event.proportion
-createTestAndTrainSamples <- function(dataset = dataset, 
-                                      yvar = y_column_name, 
-                                      seed = seed_number,
-                                      percentage = percentage_value) {
+createTestAndTrainSamples <- function(dataset, 
+                                      yvar, 
+                                      seed = 12345,
+                                      percentage = 0.7) {
   
   # checking missing parameters and setting default values
   if(missing(seed)) {
