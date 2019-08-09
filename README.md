@@ -11,7 +11,7 @@ All the functions and resources available in this package came from the **Busine
 - Gustavo Mirapalheta
 - João Rafael Dias
 
-Thanks to you all for that!
+Thanks you all for that!
 
 # Installation
 
