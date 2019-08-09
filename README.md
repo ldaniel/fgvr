@@ -11,7 +11,7 @@ All the functions and resources available in this package was inspired on the **
 - Gustavo Mirapalheta (Exploratory Data Analysis)
 - João Rafael Dias (Predictive Analytics)
 
-Thanks you all for that!
+Thank you all for that!
 
 # Installation
 
