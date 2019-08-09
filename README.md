@@ -41,11 +41,11 @@ base <- fgvr::loansdefaulters
 #                the default value is 12345.
 #   percentage = the percentage of data that goes to training sample.
 #                the default value is 0.7.
-mydataset <- fgvr::createTestAndTrainSamples(dataset = base, yvar = "Name_of_your_Y_var", 
+mydataset <- fgvr::createTestAndTrainSamples(dataset = base, yvar = "y_loan_defaulter", 
                                              seed = 12345, percentage = 0.7)
 
 # or omitting 'seed' and 'percentage' parameters, then the default values will be used.
-mydataset <- fgvr::createTestAndTrainSamples(dataset = base, yvar = "Name_of_your_Y_var")
+mydataset <- fgvr::createTestAndTrainSamples(dataset = base, yvar = "y_loan_defaulter")
 
 # getting the final samples and proportion.
 mydataset$data.train
