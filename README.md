@@ -31,7 +31,8 @@ The fgvr package has a set of handy functions.
 This function creates train and test datasets given a database and the Y variable. In addition, this function also returns the sample proportion for each dataset.
 
 ```R
-base <- (your code to load any desired database to a dataframe object)
+# using, just as an example, the sample dataset loansdefaulters, also included in the package 
+base <- fgvr::loansdefaulters
 
 # example calling the function by passing all parameters:
 #   dataset    = the dataset you want to split into test and train samples.
