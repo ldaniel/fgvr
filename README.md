@@ -8,8 +8,8 @@ The premise of this package is gathering a set of R functions that helps FGV MBA
 
 All the functions and resources available in this package came from the **Business Analytics and Big Data** classes, where the following Professors shedded some light into our minds: 
 
-- Gustavo Mirapalheta
-- João Rafael Dias
+- Gustavo Mirapalheta (Exploratory Data Analysis)
+- João Rafael Dias (Predictive Analytics)
 
 Thanks you all for that!
 
