@@ -6,7 +6,7 @@ R package to power-up data science analysis based on learned techniques in the F
 
 The premise of this package is gathering a set of R functions that helps FGV MBA's students performing repetitive activities during the following steps: Data Cleaning, Data Enhancements, Data Preparation... and more!
 
-All the functions and resources available in this package came from the **Business Analytics and Big Data** classes, where the following Professors shedded some light into our minds. 
+All the functions and resources available in this package came from the **Business Analytics and Big Data** classes, where the following Professors shedded some light into our minds: 
 
 - Gustavo Mirapalheta
 - João Rafael Dias
