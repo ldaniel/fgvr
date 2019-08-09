@@ -11,6 +11,8 @@ The premise of this package is gathering a set of R functions that helps FGV MBA
 * Data Preparation;
 * ... and more!
 
+All the functions and resources available in this package came from the **Business Analytics and Big Data** classes, where the Professors shedded some light into our minds. Thanks to them for that!
+
 # Installation
 
 To get the current development version from github:
