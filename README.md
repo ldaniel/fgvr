@@ -21,6 +21,18 @@ To get the current development version from github:
 # install.packages("devtools")
 devtools::install_github("ldaniel/fgvr")
 ```
+
+# Running
+
+The fgvr package has a set of handy functions.
+
+## createProjectFromTemplate
+
+This function creates an initial R project setup focused in data science.
+
+```R
+createProjectFromTemplate("Predictive-Analytics", "c:/temp")
+```
 The following structure will be created:
 ```
 |   myproject.Rproj
@@ -59,18 +71,6 @@ The following structure will be created:
         step_04_label_translation.R
         step_05_data_enhancement.R
         step_06_dataset_preparation.R
-```
-
-# Running
-
-The fgvr package has a set of handy functions.
-
-## createProjectFromTemplate
-
-This function creates an initial R project setup focused in data science.
-
-```R
-createProjectFromTemplate("Predictive-Analytics", "c:/temp")
 ```
 
 ## createTestAndTrainSamples
