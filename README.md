@@ -26,6 +26,14 @@ devtools::install_github("ldaniel/fgvr")
 
 The fgvr package has a set of handy functions.
 
+## createProjectFromTemplate
+
+This function creates an initial R project setup focused in data science.
+
+```R
+createProjectFromTemplate("Predictive-Analytics", "c:/temp")
+```
+
 ## createTestAndTrainSamples
 
 This function creates train and test datasets given a database and the Y variable. In addition, this function also returns the sample proportion for each dataset.
