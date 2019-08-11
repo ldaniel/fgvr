@@ -21,6 +21,45 @@ To get the current development version from github:
 # install.packages("devtools")
 devtools::install_github("ldaniel/fgvr")
 ```
+The following structure will be created:
+```
+|   myproject.Rproj
+|   README.md
+|
++---data
+|   +---processed
+|   |       readme.txt
+|   |
+|   \---raw
+|           readme.txt
+|
++---images
+|       readme.txt
+|
++---markdown
+|       01_about_the_data.Rmd
+|       02_data_preparation.Rmd
+|       03_exploration_report.Rmd
+|       conclusion.Rmd
+|       index.Rmd
+|       references.Rmd
+|       _pdf.Rmd
+|       _site.yml
+|
++---models
+|       readme.txt
+|
+\---scripts
+        generate_markdown_website.R
+        playground.R
+        step_00_config_environment.R
+        step_01_create_functions.R
+        step_02_data_ingestion.R
+        step_03_data_cleaning.R
+        step_04_label_translation.R
+        step_05_data_enhancement.R
+        step_06_dataset_preparation.R
+```
 
 # Running
 
