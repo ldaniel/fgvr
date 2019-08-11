@@ -54,7 +54,7 @@ createProjectFromTemplate <- function(name,
     projectModelsDirectory        <- paste(targetDirectoryPath,  "models", sep = "/")
     projectScriptsDirectory       <- paste(targetDirectoryPath,  "scripts", sep = "/")
     
-    # creating the list with train, test and proportion results
+    # creating the result list with project information
     project <- list()
     project$path                <- currentDirectoryPath
     project$data.path           <- projectDataDirectory
