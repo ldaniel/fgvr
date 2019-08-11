@@ -18,7 +18,8 @@ createProject <- function(name) {
   }
   
   currentDirectoryPath <- getwd()
-  parentDirectoryPath  <- dirname(getwd())
+  parentDirectoryPath  <- dirname(currentDirectoryPath)
+  targetDirectoryPath <- paste(parentDirectoryPath, name, sep = "/")
   
   # creating the list with train, test and proportion results
   project <- list()
