@@ -10,7 +10,8 @@ Depends:
     R (>= 2.15)
 Imports:
     dplyr,
-    caret
+    caret,
+    downloader
 Suggests:
     knitr,
     devtools,
