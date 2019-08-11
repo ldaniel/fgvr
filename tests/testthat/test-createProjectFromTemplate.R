@@ -1,4 +1,4 @@
-context("create project")
+context("create project from template")
 library(fgvr)
 
 test_that("function returns a list object containing all the directories path", {

@@ -1,4 +1,4 @@
-#' Create Project
+#' Create a new R project from template
 #'
 #' This function creates an initial R project setup focused in data science.
 #' @author Leandro Daniel
@@ -10,8 +10,8 @@
 #' @export
 #' @examples
 #' createProject("Predictive-Analytics")
-createProject <- function(name,
-                          directorypath = NULL) {
+createProjectFromTemplate <- function(name, 
+                                      directorypath = NULL) {
   
   # checking missing parameters and setting default values
   if(missing(name)) {
@@ -33,6 +33,9 @@ createProject <- function(name,
     
     dir.create(targetDirectoryPath)
     
+    download(url, dest="dataset.zip", mode="wb") 
+    unzip ("dataset.zip", exdir = "./")
+    
     projectDataDirectory          <- paste(targetDirectoryPath,  "data", sep = "/")
     projectDataRawDirectory       <- paste(projectDataDirectory, "raw", sep = "/")
     projectDataProcessedDirectory <- paste(projectDataDirectory, "processed", sep = "/")
@@ -40,15 +43,6 @@ createProject <- function(name,
     projectMarkdownDirectory      <- paste(targetDirectoryPath,  "markdown", sep = "/")
     projectModelsDirectory        <- paste(targetDirectoryPath,  "models", sep = "/")
     projectScriptsDirectory       <- paste(targetDirectoryPath,  "scripts", sep = "/")
-    
-    dir.create(projectDataDirectory)
-    dir.create(projectDataRawDirectory)
-    dir.create(projectDataProcessedDirectory)
-    dir.create(projectImagesDirectory)
-    dir.create(projectMarkdownDirectory)
-    dir.create(projectModelsDirectory)
-    dir.create(projectScriptsDirectory)
-    
   } else {
     print(paste0("The directory already exists: ", targetDirectoryPath))
   }
