@@ -31,7 +31,7 @@ The fgvr package has a set of handy functions.
 This function creates an initial R project setup focused in data science.
 
 ```R
-createProjectFromTemplate("Predictive-Analytics", "c:/temp")
+fgvr::createProjectFromTemplate("Predictive-Analytics", "c:/temp")
 ```
 The following structure will be created:
 ```
