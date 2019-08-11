@@ -10,25 +10,59 @@
 #' @export
 #' @examples
 #' createProject("Predictive-Analytics")
-createProject <- function(name) {
+createProject <- function(name,
+                          directorypath = NULL) {
   
   # checking missing parameters and setting default values
   if(missing(name)) {
     name = "myproject"
   }
   
-  currentDirectoryPath <- getwd()
+  if(missing(directorypath)) {
+    directorypath = getwd()
+  }
+  
+  name <- "test"
+  directorypath <- "d:/Temp"
+  
+  currentDirectoryPath <- directorypath
   parentDirectoryPath  <- dirname(currentDirectoryPath)
-  targetDirectoryPath <- paste(parentDirectoryPath, name, sep = "/")
+  targetDirectoryPath  <- paste(parentDirectoryPath, name, sep = "")
+  
+  if (!dir.exists(targetDirectoryPath)) {
+    
+    dir.create(targetDirectoryPath)
+    
+    projectDataDirectory          <- paste(targetDirectoryPath,  "data", sep = "/")
+    projectDataRawDirectory       <- paste(projectDataDirectory, "raw", sep = "/")
+    projectDataProcessedDirectory <- paste(projectDataDirectory, "processed", sep = "/")
+    projectImagesDirectory        <- paste(targetDirectoryPath,  "images", sep = "/")
+    projectMarkdownDirectory      <- paste(targetDirectoryPath,  "markdown", sep = "/")
+    projectModelsDirectory        <- paste(targetDirectoryPath,  "models", sep = "/")
+    projectScriptsDirectory       <- paste(targetDirectoryPath,  "scripts", sep = "/")
+    
+    dir.create(projectDataDirectory)
+    dir.create(projectDataRawDirectory)
+    dir.create(projectDataProcessedDirectory)
+    dir.create(projectImagesDirectory)
+    dir.create(projectMarkdownDirectory)
+    dir.create(projectModelsDirectory)
+    dir.create(projectScriptsDirectory)
+    
+  } else {
+    print(paste0("The directory already exists: ", targetDirectoryPath))
+  }
   
   # creating the list with train, test and proportion results
   project <- list()
-  project$path          <- currentDirectoryPath
-  project$data.path     <- ""
-  project$images.path   <- ""
-  project$markdown.path <- ""
-  project$models.path   <- ""
-  project$scripts.path  <- ""
+  project$path                <- currentDirectoryPath
+  project$data.path           <- projectDataDirectory
+  project$data.raw.path       <- projectDataRawDirectory
+  project$data.processed.path <- projectDataProcessedDirectory
+  project$images.path         <- projectImagesDirectory
+  project$markdown.path       <- projectMarkdownDirectory
+  project$models.path         <- projectModelsDirectory
+  project$scripts.path        <- projectScriptsDirectory
   
   return(project)
 }
