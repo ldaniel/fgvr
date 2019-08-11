@@ -2,8 +2,7 @@
 #'
 #' This function creates an initial R project setup focused in data science.
 #' @author Leandro Daniel
-#' @import dplyr
-#' @importFrom caret createDataPartition
+#' @import downloader
 #' @param name The name of you R project (it will be created a directory using this name).
 #' @return An object list with handy information about the project, like path and initial setup.
 #' @keywords project, data-science, setup 
@@ -28,13 +27,18 @@ createProjectFromTemplate <- function(name,
   currentDirectoryPath <- directorypath
   parentDirectoryPath  <- dirname(currentDirectoryPath)
   targetDirectoryPath  <- paste(parentDirectoryPath, name, sep = "")
+  templateName         <- "projecttemplate.zip"
+  zipFilePath          <- paste(currentDirectoryPath, templateName, sep = "/")
   
   if (!dir.exists(targetDirectoryPath)) {
     
     dir.create(targetDirectoryPath)
     
-    download(url, dest="dataset.zip", mode="wb") 
-    unzip ("dataset.zip", exdir = "./")
+    downloader::download("https://github.com/ldaniel/fgvr/blob/master/assets/projecttemplate.zip", 
+                         dest = zipFilePath,
+                         mode = "wb") 
+    
+    unzip(zipfile = zipFilePath, exdir = targetDirectoryPath)
     
     projectDataDirectory          <- paste(targetDirectoryPath,  "data", sep = "/")
     projectDataRawDirectory       <- paste(projectDataDirectory, "raw", sep = "/")
