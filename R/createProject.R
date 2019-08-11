@@ -15,15 +15,19 @@ createProject <- function(name) {
   # checking missing parameters and setting default values
   if(missing(name)) {
     name = "myproject"
-  }  
+  }
+  
+  currentDirectoryPath <- getwd()
+  parentDirectoryPath  <- dirname(getwd())
   
   # creating the list with train, test and proportion results
   project <- list()
-  project$data.path <- ""
-  project$images.path <- ""
+  project$path          <- currentDirectoryPath
+  project$data.path     <- ""
+  project$images.path   <- ""
   project$markdown.path <- ""
-  project$models.path <- ""
-  project$scripts.path <- ""
+  project$models.path   <- ""
+  project$scripts.path  <- ""
   
   return(project)
 }
