@@ -11,7 +11,8 @@ Depends:
 Imports:
     dplyr,
     caret,
-    downloader
+    downloader,
+    stringr
 Suggests:
     knitr,
     devtools,
