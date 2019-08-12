@@ -17,8 +17,10 @@ test_that("function returns a list object containing all the directories path", 
   # expect_equal(myproject$models.path, paste(projectpath, "models", sep = "/"))
   # expect_equal(myproject$scripts.path, paste(projectpath, "scripts", sep = "/"))
   
-  if(dir.exists(projectname))
+  unlink(paste(projectpath, projectname, sep = "/"))
+  
+  if(dir.exists(paste(projectpath, projectname, sep = "/")))
   {
-    do.call(file.remove, list(list.files(projectname, full.names = TRUE)))
+    do.call(file.remove, list(list.files(paste(projectpath, projectname, sep = "/"), full.names = TRUE)))
   }
 })
