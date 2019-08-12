@@ -23,9 +23,6 @@ createProjectFromTemplate <- function(name,
     directorypath = getwd()
   }
   
-  name <- "test"
-  directorypath <- "d:/Temp"
-  
   currentDirectoryPath <- directorypath
   parentDirectoryPath  <- dirname(currentDirectoryPath)
   targetDirectoryPath  <- paste(parentDirectoryPath, name, sep = "")
