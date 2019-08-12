@@ -15,7 +15,10 @@
 #' @export
 #' @examples
 #' base = loansdefaulters
-#' mydataset <- createTestAndTrainSamples(dataset = base, yvar = "y_loan_defaulter", seed = 12345, percentage = 0.7)
+#' mydataset <- createTestAndTrainSamples(dataset = base, 
+#'                                        yvar = "y_loan_defaulter", 
+#'                                        seed = 12345, 
+#'                                        percentage = 0.7)
 #' # or
 #' mydataset <- createTestAndTrainSamples(dataset = base, yvar = "y_loan_defaulter")
 #' # to use the final samples and to see the proportion
@@ -45,6 +48,7 @@ createTestAndTrainSamples <- function(dataset,
   data.test  <- dataset[-index,]
   
   # checking event proportion in sample and test datasets against full dataset
+  event_proportion <- list()
   event_proportion <- bind_rows(prop.table(table(dataset[[yvar]])),
                                 prop.table(table(data.train[[yvar]])),
                                 prop.table(table(data.test[[yvar]])))
