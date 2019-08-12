@@ -12,7 +12,8 @@ Imports:
     dplyr,
     caret,
     downloader,
-    stringr
+    stringr,
+    utils
 Suggests:
     knitr,
     devtools,
