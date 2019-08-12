@@ -35,6 +35,7 @@ fgvr::createProjectFromTemplate("Predictive-Analytics", "c:/temp")
 ```
 The following structure will be created:
 ```
+[Project root directory]
 |   myproject.Rproj
 |   README.md
 |

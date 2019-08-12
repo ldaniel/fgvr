@@ -30,7 +30,7 @@ createProjectFromTemplate <- function(name,
   targetDirectoryPath  <- paste(parentDirectoryPath, name, sep = "")
   templateName         <- "projecttemplate.zip"
   zipFilePath          <- paste(currentDirectoryPath, templateName, sep = "/")
-  projectTemplateURL   <- "https://github.com/ldaniel/fgvr/blob/master/assets/projecttemplate.zip?raw=true"
+  projectTemplateURL   <- Sys.getenv("url_project_template")
   
   # checking if directory already exists
   if (!dir.exists(targetDirectoryPath)) {
