@@ -3,6 +3,7 @@
 #' This function creates an initial R project setup focused in data science.
 #' @author Leandro Daniel
 #' @import downloader
+#' @importFrom stringr str_replace
 #' @param name The name of you R project (it will be created a directory using this name).
 #' @param directorypath The directory path in which the project will be created.
 #' @return An object list with handy information about the project, like path and initial setup.
@@ -46,24 +47,31 @@ createProjectFromTemplate <- function(name,
     # remove project template zip file
     unlink(zipFilePath)
     
-    projectDataDirectory          <- paste(targetDirectoryPath,  "data", sep = "/")
-    projectDataRawDirectory       <- paste(projectDataDirectory, "raw", sep = "/")
-    projectDataProcessedDirectory <- paste(projectDataDirectory, "processed", sep = "/")
-    projectImagesDirectory        <- paste(targetDirectoryPath,  "images", sep = "/")
-    projectMarkdownDirectory      <- paste(targetDirectoryPath,  "markdown", sep = "/")
-    projectModelsDirectory        <- paste(targetDirectoryPath,  "models", sep = "/")
-    projectScriptsDirectory       <- paste(targetDirectoryPath,  "scripts", sep = "/")
+    # list all files created and replace "__myproject__" with the project name
+    fileslist <- list.files(targetDirectoryPath, recursive = TRUE)
+    for(file in fileslist){
+      fullFilePath <- paste(targetDirectoryPath, file, sep = "/")
+      fileContent    <- readLines(fullFilePath)
+      fileNewContent <- gsub(pattern = "__myproject__", replace = name, x = fileContent)
+      writeLines(fileNewContent, con = fullFilePath)
+      print(paste0("Replacing '__myproject__' text with project name in the file: ", file))
+      
+      if(stringr::str_detect(file, "__myproject__")) {
+        file.rename(fullFilePath, stringr::str_replace(fullFilePath, "__myproject__", name))
+        print(paste0("Renaming file name from '__myproject__' to project name: ", file))
+      }
+    }
     
     # creating the result list with project information
     project <- list()
     project$path                <- currentDirectoryPath
-    project$data.path           <- projectDataDirectory
-    project$data.raw.path       <- projectDataRawDirectory
-    project$data.processed.path <- projectDataProcessedDirectory
-    project$images.path         <- projectImagesDirectory
-    project$markdown.path       <- projectMarkdownDirectory
-    project$models.path         <- projectModelsDirectory
-    project$scripts.path        <- projectScriptsDirectory
+    project$data.path           <- paste(targetDirectoryPath,  "data", sep = "/")
+    project$data.raw.path       <- paste(projectDataDirectory, "raw", sep = "/")
+    project$data.processed.path <- paste(projectDataDirectory, "processed", sep = "/")
+    project$images.path         <- paste(targetDirectoryPath,  "images", sep = "/")
+    project$markdown.path       <- paste(targetDirectoryPath,  "markdown", sep = "/")
+    project$models.path         <- paste(targetDirectoryPath,  "models", sep = "/")
+    project$scripts.path        <- paste(targetDirectoryPath,  "scripts", sep = "/")
   } else {
     print(paste0("The directory already exists and the project will not be created: ", 
                  targetDirectoryPath))
