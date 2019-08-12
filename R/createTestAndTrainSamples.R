@@ -49,14 +49,18 @@ createTestAndTrainSamples <- function(dataset,
   
   # checking event proportion in sample and test datasets against full dataset
   event_proportion <- list()
+  event_proportion$scope <- factor()
+  
   event_proportion <- bind_rows(prop.table(table(dataset[[yvar]])),
                                 prop.table(table(data.train[[yvar]])),
                                 prop.table(table(data.test[[yvar]])))
   
-  event_proportion$scope = ''
-  event_proportion$scope[1] = 'full dataset'
-  event_proportion$scope[2] = 'train dataset'
-  event_proportion$scope[3] = 'test dataset'
+  event_proportion$scope <- c('full dataset', 'train dataset', 'test dataset')
+  
+  # event_proportion$scope = array()
+  # event_proportion$scope[1] = 'full dataset'
+  # event_proportion$scope[2] = 'train dataset'
+  # event_proportion$scope[3] = 'test dataset'
   
   event_proportion <- select(event_proportion, scope, everything())
   
