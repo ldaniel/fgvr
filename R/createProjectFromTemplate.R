@@ -14,7 +14,7 @@
 #' createProjectFromTemplate("Predictive-Analytics", "c:/temp")
 createProjectFromTemplate <- function(name, 
                                       directorypath = NULL) {
-  
+
   # checking missing parameters and setting default values
   if(missing(name)) {
     name = "myproject"
@@ -22,14 +22,14 @@ createProjectFromTemplate <- function(name,
   
   if(missing(directorypath)) {
     directorypath = getwd()
+    parentDirectoryPath  <- dirname(directorypath)
+    directorypath <- paste(parentDirectoryPath, name, sep = "")
   }
   
   # set variables
-  currentDirectoryPath <- directorypath
-  parentDirectoryPath  <- dirname(currentDirectoryPath)
-  targetDirectoryPath  <- paste(parentDirectoryPath, name, sep = "")
+  targetDirectoryPath  <- paste(directorypath, name, sep = "/")
   templateName         <- "projecttemplate.zip"
-  zipFilePath          <- paste(currentDirectoryPath, templateName, sep = "/")
+  zipFilePath          <- paste(targetDirectoryPath, templateName, sep = "/")
   projectTemplateURL   <- Sys.getenv("url_project_template")
   
   # checking if directory already exists
@@ -52,7 +52,7 @@ createProjectFromTemplate <- function(name,
     for(file in fileslist){
       fullFilePath <- paste(targetDirectoryPath, file, sep = "/")
       fileContent    <- readLines(fullFilePath)
-      fileNewContent <- gsub(pattern = "__myproject__", replacement = name, x = fileContent)
+      fileNewContent <- gsub(pattern = "__myproject__", replace = name, x = fileContent)
       writeLines(fileNewContent, con = fullFilePath)
       print(paste0("Replacing '__myproject__' text with project name in the file: ", file))
       
@@ -64,7 +64,7 @@ createProjectFromTemplate <- function(name,
     
     # creating the result list with project information
     project <- list()
-    project$path                <- currentDirectoryPath
+    project$path                <- targetDirectoryPath
     project$data.path           <- paste(targetDirectoryPath,  "data", sep = "/")
     project$data.raw.path       <- paste(project$data.path, "raw", sep = "/")
     project$data.processed.path <- paste(project$data.path, "processed", sep = "/")
