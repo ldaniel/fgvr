@@ -23,6 +23,7 @@ createProjectFromTemplate <- function(name,
     directorypath = getwd()
   }
   
+  # set variables
   currentDirectoryPath <- directorypath
   parentDirectoryPath  <- dirname(currentDirectoryPath)
   targetDirectoryPath  <- paste(parentDirectoryPath, name, sep = "")
@@ -30,12 +31,13 @@ createProjectFromTemplate <- function(name,
   zipFilePath          <- paste(currentDirectoryPath, templateName, sep = "/")
   projectTemplateURL   <- "https://github.com/ldaniel/fgvr/blob/master/assets/projecttemplate.zip?raw=true"
   
+  # checking if directory already exists
   if (!dir.exists(targetDirectoryPath)) {
     
     # create target directory path
     dir.create(targetDirectoryPath)
     
-    # download project template zip file from fgvr Githug repository
+    # download project template zip file from fgvr Github repository
     downloader::download(projectTemplateURL, dest = zipFilePath, mode = "wb") 
     
     # unzip file to the target directory path
