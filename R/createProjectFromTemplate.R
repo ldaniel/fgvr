@@ -52,7 +52,7 @@ createProjectFromTemplate <- function(name,
     for(file in fileslist){
       fullFilePath <- paste(targetDirectoryPath, file, sep = "/")
       fileContent    <- readLines(fullFilePath)
-      fileNewContent <- gsub(pattern = "__myproject__", replace = name, x = fileContent)
+      fileNewContent <- gsub(pattern = "__myproject__", replacement = name, x = fileContent)
       writeLines(fileNewContent, con = fullFilePath)
       print(paste0("Replacing '__myproject__' text with project name in the file: ", file))
       
