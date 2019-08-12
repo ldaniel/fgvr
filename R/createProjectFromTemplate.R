@@ -4,6 +4,7 @@
 #' @author Leandro Daniel
 #' @import downloader
 #' @importFrom stringr str_replace
+#' @importFrom utils unzip
 #' @param name The name of you R project (it will be created a directory using this name).
 #' @param directorypath The directory path in which the project will be created.
 #' @return An object list with handy information about the project, like path and initial setup.
@@ -65,8 +66,8 @@ createProjectFromTemplate <- function(name,
     project <- list()
     project$path                <- currentDirectoryPath
     project$data.path           <- paste(targetDirectoryPath,  "data", sep = "/")
-    project$data.raw.path       <- paste(projectDataDirectory, "raw", sep = "/")
-    project$data.processed.path <- paste(projectDataDirectory, "processed", sep = "/")
+    project$data.raw.path       <- paste(project$data.path, "raw", sep = "/")
+    project$data.processed.path <- paste(project$data.path, "processed", sep = "/")
     project$images.path         <- paste(targetDirectoryPath,  "images", sep = "/")
     project$markdown.path       <- paste(targetDirectoryPath,  "markdown", sep = "/")
     project$models.path         <- paste(targetDirectoryPath,  "models", sep = "/")
