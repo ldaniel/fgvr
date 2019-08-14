@@ -36,8 +36,8 @@ fgvr::createProjectFromTemplate("Predictive-Analytics", "c:/temp")
 The following structure will be created:
 ```
 [Project root directory]
-|   myproject.Rproj
 |   README.md
+|   __myproject__.Rproj
 |
 +---data
 |   +---processed
@@ -62,16 +62,21 @@ The following structure will be created:
 +---models
 |       readme.txt
 |
-\---scripts
-        generate_markdown_website.R
-        playground.R
-        step_00_config_environment.R
-        step_01_create_functions.R
-        step_02_data_ingestion.R
-        step_03_data_cleaning.R
-        step_04_label_translation.R
-        step_05_data_enhancement.R
-        step_06_dataset_preparation.R
+\---src
+    +---datapreparation
+    |       step_00_config_environment.R
+    |       step_01_create_functions.R
+    |       step_02_data_ingestion.R
+    |       step_03_data_cleaning.R
+    |       step_04_label_translation.R
+    |       step_05_data_enhancement.R
+    |       step_06_dataset_preparation.R
+    |
+    +---playground
+    |       playground.R
+    |
+    \---util
+            generate_markdown_website.R
 ```
 
 ## createTestAndTrainSamples
