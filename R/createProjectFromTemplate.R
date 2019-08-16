@@ -64,14 +64,30 @@ createProjectFromTemplate <- function(name,
     
     # creating the result list with project information
     project <- list()
-    project$path                <- targetDirectoryPath
-    project$data.path           <- paste(targetDirectoryPath,  "data", sep = "/")
-    project$data.raw.path       <- paste(project$data.path, "raw", sep = "/")
-    project$data.processed.path <- paste(project$data.path, "processed", sep = "/")
-    project$images.path         <- paste(targetDirectoryPath,  "images", sep = "/")
-    project$markdown.path       <- paste(targetDirectoryPath,  "markdown", sep = "/")
-    project$models.path         <- paste(targetDirectoryPath,  "models", sep = "/")
-    project$scripts.path        <- paste(targetDirectoryPath,  "scripts", sep = "/")
+    
+    project$path <- ifelse(dir.exists(targetDirectoryPath),
+                      targetDirectoryPath, NULL)
+    
+    project$data.path <- ifelse(dir.exists(paste(targetDirectoryPath,  "data", sep = "/")),
+                                paste(targetDirectoryPath,  "data", sep = "/"), NULL)
+    
+    project$data.raw.path <- ifelse(dir.exists(paste(project$data.path,  "raw", sep = "/")),
+                                paste(project$data.path,  "raw", sep = "/"), NULL)
+    
+    project$data.processed.path <- ifelse(dir.exists(paste(project$data.path,  "processed", sep = "/")),
+                                    paste(project$data.path,  "processed", sep = "/"), NULL)
+    
+    project$images.path <- ifelse(dir.exists(paste(targetDirectoryPath,  "images", sep = "/")),
+                                paste(targetDirectoryPath,  "images", sep = "/"), NULL)
+    
+    project$markdown.path <- ifelse(dir.exists(paste(targetDirectoryPath,  "markdown", sep = "/")),
+                                  paste(targetDirectoryPath,  "markdown", sep = "/"), NULL)
+    
+    project$models.path <- ifelse(dir.exists(paste(targetDirectoryPath,  "models", sep = "/")),
+                                  paste(targetDirectoryPath,  "models", sep = "/"), NULL)
+    
+    project$src.path <- ifelse(dir.exists(paste(targetDirectoryPath,  "src", sep = "/")),
+                                  paste(targetDirectoryPath,  "src", sep = "/"), NULL)
   } else {
     print(paste0("The directory already exists and the project will not be created: ", 
                  targetDirectoryPath))
