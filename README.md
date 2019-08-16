@@ -6,12 +6,12 @@ R package to power-up data science analysis based on learned techniques in the F
 
 The premise of this package is gathering a set of R functions that helps FGV MBA's students performing repetitive activities during the following steps: **Data Cleaning**, **Data Enhancements**, **Data Preparation**... and more!
 
-All the functions and resources available in this package was inspired on the **Business Analytics and Big Data** classes, where the following Professors shed some light into our minds: 
+All functions and resources available in this package was inspired on the **Business Analytics and Big Data** classes, where the following Professors shed some light into our minds: 
 
 - Gustavo Mirapalheta (Exploratory Data Analysis)
 - João Rafael Dias (Predictive Analytics)
 
-Thank you all for that!
+Thank you all for that! :smile:
 
 # Installation
 
@@ -36,8 +36,8 @@ fgvr::createProjectFromTemplate("Predictive-Analytics", "c:/temp")
 The following structure will be created:
 ```
 [Project root directory]
-|   myproject.Rproj
 |   README.md
+|   __myproject__.Rproj
 |
 +---data
 |   +---processed
@@ -62,16 +62,21 @@ The following structure will be created:
 +---models
 |       readme.txt
 |
-\---scripts
-        generate_markdown_website.R
-        playground.R
-        step_00_config_environment.R
-        step_01_create_functions.R
-        step_02_data_ingestion.R
-        step_03_data_cleaning.R
-        step_04_label_translation.R
-        step_05_data_enhancement.R
-        step_06_dataset_preparation.R
+\---src
+    +---datapreparation
+    |       step_00_config_environment.R
+    |       step_01_create_functions.R
+    |       step_02_data_ingestion.R
+    |       step_03_data_cleaning.R
+    |       step_04_label_translation.R
+    |       step_05_data_enhancement.R
+    |       step_06_dataset_preparation.R
+    |
+    +---playground
+    |       playground.R
+    |
+    \---util
+            generate_markdown_website.R
 ```
 
 ## createTestAndTrainSamples
