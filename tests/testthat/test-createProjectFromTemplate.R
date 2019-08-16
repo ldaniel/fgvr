@@ -15,7 +15,7 @@ test_that("function returns a list object containing all the directories path", 
   expect_equal(myproject$images.path, paste(projectpath, projectname, "images", sep = "/"))
   expect_equal(myproject$markdown.path, paste(projectpath, projectname, "markdown", sep = "/"))
   expect_equal(myproject$models.path, paste(projectpath, projectname, "models", sep = "/"))
-  expect_equal(myproject$scripts.path, paste(projectpath, projectname, "scripts", sep = "/"))
+  expect_equal(myproject$src.path, paste(projectpath, projectname, "src", sep = "/"))
   
   # delete project created
   unlink(paste(projectpath, projectname, sep = "/"), recursive = TRUE)
