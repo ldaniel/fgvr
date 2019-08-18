@@ -41,10 +41,15 @@ The following structure will be created:
 |
 +---data
 |   +---processed
+|   |       bigtable.feather
 |   |       readme.txt
 |   |
 |   \---raw
+|           game-of-thrones-deaths-data.txt
 |           readme.txt
+|
++---docs
+|       readme.txt
 |
 +---images
 |       readme.txt
@@ -61,6 +66,7 @@ The following structure will be created:
 |
 +---models
 |       readme.txt
+|       source_train_test_dataset.rds
 |
 \---src
     +---datapreparation
