@@ -3,8 +3,8 @@ library(fgvr)
 
 test_that("function returns a list object containing all the directories path", {
   
-  projectname <- "myteste"
-  projectpath <- "d:/Temp"
+  projectname <- Sys.getenv("project_name")
+  projectpath <- Sys.getenv("project_path")
   myproject <- fgvr::createProjectFromTemplate(projectname, projectpath)
   
   expect_equal(length(myproject), 8)
