@@ -1,1 +1,2 @@
-url_project_template = "https://github.com/ldaniel/fgvr/blob/master/assets/projecttemplate.zip?raw=true"
+project_name = "myteste"
+project_path = "d:/Temp"
