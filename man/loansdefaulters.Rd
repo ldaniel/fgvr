@@ -4,7 +4,7 @@
 \name{loansdefaulters}
 \alias{loansdefaulters}
 \title{Loans defaulters dataset}
-\format{An object of class \code{"cross"}; see \code{\link[qtl]{read.cross}}.}
+\format{An object of class \code{data.frame} with 682 rows and 118 columns.}
 \source{
 \href{https://github.com/ldaniel/Predictive-Analytics}{Predictive-Analytics source}
 }
