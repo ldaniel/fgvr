@@ -70,8 +70,8 @@ The following structure will be created:
 |
 \---src
     +---datapreparation
-    |       step_00_config_environment.R
-    |       step_01_create_functions.R
+    |       execute_data_preparation.R
+    |       step_01_config_environment.R
     |       step_02_data_ingestion.R
     |       step_03_data_cleaning.R
     |       step_04_label_translation.R
@@ -82,6 +82,7 @@ The following structure will be created:
     |       playground.R
     |
     \---util
+            auxiliary_functions.R
             generate_markdown_website.R
 ```
 
