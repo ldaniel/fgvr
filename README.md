@@ -10,6 +10,7 @@ All functions and resources available in this package was inspired on the **Busi
 
 - Gustavo Mirapalheta (Exploratory Data Analysis)
 - João Rafael Dias (Predictive Analytics)
+- Eduardo Francisco (Spatial statistics)
 
 Thank you all for that! :smile:
 
