@@ -8,9 +8,11 @@ The premise of this package is gathering a set of R functions that helps FGV MBA
 
 All functions and resources available in this package was inspired on the **Business Analytics and Big Data** classes, where the following Professors shed some light into our minds: 
 
-- Gustavo Mirapalheta (Exploratory Data Analysis)
-- João Rafael Dias (Predictive Analytics)
-- Eduardo Francisco (Spatial statistics)
+- Gustavo Mirapalheta [https://github.com/ldaniel/Exploratory-Data-Analysis](Exploratory Data Analysis)
+- João Rafael Dias [https://github.com/ldaniel/Predictive-Analytics](Predictive Analytics)
+- Eduardo Francisco [https://github.com/ldaniel/Spatial-Statistics](Spatial statistics)
+- Rafael Scopel [https://github.com/ldaniel/Time-Series-Analysis](Time Series Analysis)
+- Rodrigo Togneri [https://github.com/ldaniel/Matrix-Methods-Cluster-Analysis](Matrix Methods and Cluster Analysis)
 
 Thank you all for that! :smile:
 
