@@ -18,6 +18,17 @@ All functions and resources available in this package was inspired on the **Busi
 
 Thank you all for that! :smile:
 
+# Contributors
+
+Special thanks to these awesome contributors (@Daniel[https://github.com/DanielFCampos], @Rodrigo[https://github.com/RodriGonca] e @Ygor[https://github.com/ygorlima1]) who shared a lot of time and dedication to achieve such great work!
+
+|Profile|Name|E-mail|
+|---|---|---|
+|<a href="https://github.com/DanielFCampos"><img src="https://avatars2.githubusercontent.com/u/31582602?s=460&v=4" title="DanielFCampos" width="80" height="80"></a>|Daniel Campos|[(daniel.ferraz.campos@gmail.com)](daniel.ferraz.campos@gmail.com)|
+|<a href="https://github.com/ldaniel"><img src="https://avatars2.githubusercontent.com/u/205534?s=460&v=4" title="ldaniel" width="80" height="80"></a>|Leandro Daniel|[(contato@leandrodaniel.com)](contato@leandrodaniel.com)|
+|<a href="https://github.com/RodriGonca"><img src="https://avatars2.githubusercontent.com/u/50252438?s=460&v=4" title="RodriGonca" width="80" height="80"></a>|Rodrigo Goncalves|[(rodrigo.goncalves@me.com)](rodrigo.goncalves@me.com)|
+|<a href="https://github.com/ygorlima1"><img src="https://avatars2.githubusercontent.com/u/52429828?s=460&v=4" title="ygorlima1" width="80" height="80"></a>|Ygor Lima|[(ygor_redesocial@hotmail.com)](ygor_redesocial@hotmail.com)|
+
 # Installation
 
 To get the current development version from github:
