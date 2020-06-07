@@ -8,15 +8,13 @@ The premise of this package is gathering a set of R functions that helps FGV MBA
 
 All functions and resources available in this package was inspired on the **Business Analytics and Big Data** classes, where the following Professors shed some light into our minds: 
 
-- Gustavo Mirapalheta (Exploratory Data Analysis) - :octocat: [https://github.com/ldaniel/Exploratory-Data-Analysis]
-- João Rafael Dias (Predictive Analytics) - :octocat: [https://github.com/ldaniel/Predictive-Analytics]
-- Eduardo Francisco (Spatial statistics) - :octocat: [https://github.com/ldaniel/Spatial-Statistics]
-- Rafael Scopel (Time Series Analysis) - :octocat: [https://github.com/ldaniel/Time-Series-Analysis]
-- Rodrigo Togneri (Matrix Methods and Cluster Analysis) - :octocat: [https://github.com/ldaniel/Matrix-Methods-Cluster-Analysis]
-
-|Professor|Name|Assignment|
+| |Name (Discipline)|Assignment|
 |---|---|---|
-|foto|João Rafael Dias (Predictive Analytics)|:octocat: [https://github.com/ldaniel/Exploratory-Data-Analysis]|
+|foto|Gustavo Mirapalheta (Exploratory Data Analysis)|:octocat: [https://github.com/ldaniel/Exploratory-Data-Analysis]|
+|foto|João Rafael Dias (Predictive Analytics)|:octocat: [https://github.com/ldaniel/Predictive-Analytics]|
+|foto|Eduardo Francisco (Spatial statistics)|:octocat: [https://github.com/ldaniel/Spatial-Statistics]|
+|foto|Rafael Scopel (Time Series Analysis)|:octocat: [https://github.com/ldaniel/Time-Series-Analysis]|
+|foto|Rodrigo Togneri (Matrix Methods and Cluster Analysis)|:octocat: [https://github.com/ldaniel/Matrix-Methods-Cluster-Analysis]|
 
 Thank you all for that! :smile:
 
