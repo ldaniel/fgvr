@@ -10,11 +10,11 @@ All functions and resources available in this package was inspired on the **Busi
 
 | |Name (Discipline)|Assignment|
 |---|---|---|
-|foto|Gustavo Mirapalheta (Exploratory Data Analysis)|:octocat: [https://github.com/ldaniel/Exploratory-Data-Analysis]|
-|foto|João Rafael Dias (Predictive Analytics)|:octocat: [https://github.com/ldaniel/Predictive-Analytics]|
-|foto|Eduardo Francisco (Spatial statistics)|:octocat: [https://github.com/ldaniel/Spatial-Statistics]|
-|foto|Rafael Scopel (Time Series Analysis)|:octocat: [https://github.com/ldaniel/Time-Series-Analysis]|
-|foto|Rodrigo Togneri (Matrix Methods and Cluster Analysis)|:octocat: [https://github.com/ldaniel/Matrix-Methods-Cluster-Analysis]|
+|foto|Gustavo Mirapalheta</br>(Exploratory Data Analysis)|:octocat: [https://github.com/ldaniel/Exploratory-Data-Analysis]|
+|foto|João Rafael Dias</br>(Predictive Analytics)|:octocat: [https://github.com/ldaniel/Predictive-Analytics]|
+|foto|Eduardo Francisco</br>(Spatial statistics)|:octocat: [https://github.com/ldaniel/Spatial-Statistics]|
+|foto|Rafael Scopel</br>(Time Series Analysis)|:octocat: [https://github.com/ldaniel/Time-Series-Analysis]|
+|foto|Rodrigo Togneri</br>(Matrix Methods and Cluster Analysis)|:octocat: [https://github.com/ldaniel/Matrix-Methods-Cluster-Analysis]|
 
 Thank you all for that! :smile:
 
