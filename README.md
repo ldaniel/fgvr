@@ -1,4 +1,4 @@
-# fgvr <img src='man/figures/logo.png' align="right" height="139" />
+# FGVR <img src='man/figures/logo.png' align="right" height="139" />
 R package to power-up data science analysis based on learned techniques in the FGV MBA course.
 
 > Don't panic!
@@ -20,7 +20,7 @@ Thank you all for that! :smile:
 
 # Contributors
 
-Special thanks to these awesome contributors (@Daniel[https://github.com/DanielFCampos], @Rodrigo[https://github.com/RodriGonca] e @Ygor[https://github.com/ygorlima1]) who shared a lot of time and dedication to achieve such great work!
+Special thanks to these awesome contributors [**@Daniel**](https://github.com/DanielFCampos), [**@Rodrigo**](https://github.com/RodriGonca) e [**@Ygor**](https://github.com/ygorlima1) who shared a lot of time and dedication to achieve such great work!
 
 |Profile|Name|E-mail|
 |---|---|---|
