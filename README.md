@@ -22,7 +22,7 @@ Thank you all for that! :smile:
 
 Special thanks to these awesome contributors: [**@Daniel**](https://github.com/DanielFCampos), [**@Rodrigo**](https://github.com/RodriGonca) e [**@Ygor**](https://github.com/ygorlima1), who shared a lot of time and dedication to achieve such great work! :punch:
 
-|Profile|Name|E-mail|
+|Profile|Contributor|E-mail|
 |---|---|---|
 |<a href="https://github.com/DanielFCampos"><img src="https://avatars2.githubusercontent.com/u/31582602?s=460&v=4" title="DanielFCampos" width="80" height="80"></a>|Daniel Campos|[(daniel.ferraz.campos@gmail.com)](daniel.ferraz.campos@gmail.com)|
 |<a href="https://github.com/ldaniel"><img src="https://avatars2.githubusercontent.com/u/205534?s=460&v=4" title="ldaniel" width="80" height="80"></a>|Leandro Daniel|[(contato@leandrodaniel.com)](contato@leandrodaniel.com)|
