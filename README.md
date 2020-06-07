@@ -14,6 +14,10 @@ All functions and resources available in this package was inspired on the **Busi
 - Rafael Scopel (Time Series Analysis) - :octocat: [https://github.com/ldaniel/Time-Series-Analysis]
 - Rodrigo Togneri (Matrix Methods and Cluster Analysis) - :octocat: [https://github.com/ldaniel/Matrix-Methods-Cluster-Analysis]
 
+|Professor|Name|Assignment|
+|---|---|---|
+|foto|João Rafael Dias (Predictive Analytics)|:octocat: [https://github.com/ldaniel/Exploratory-Data-Analysis]|
+
 Thank you all for that! :smile:
 
 # Installation
