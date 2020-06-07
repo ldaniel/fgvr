@@ -20,7 +20,7 @@ Thank you all for that! :smile:
 
 # Contributors
 
-Special thanks to these awesome contributors [**@Daniel**](https://github.com/DanielFCampos), [**@Rodrigo**](https://github.com/RodriGonca) e [**@Ygor**](https://github.com/ygorlima1) who shared a lot of time and dedication to achieve such great work!
+Special thanks to these awesome contributors: [**@Daniel**](https://github.com/DanielFCampos), [**@Rodrigo**](https://github.com/RodriGonca) e [**@Ygor**](https://github.com/ygorlima1), who shared a lot of time and dedication to achieve such great work! :punch:
 
 |Profile|Name|E-mail|
 |---|---|---|
