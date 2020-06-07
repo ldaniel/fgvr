@@ -8,7 +8,7 @@ The premise of this package is gathering a set of R functions that helps FGV MBA
 
 All functions and resources available in this package was inspired on the **Business Analytics and Big Data** classes, where the following Professors shed some light into our minds: 
 
-| |Name (Discipline)|Assignment|
+| |Name (Discipline)|Assignment Repository|
 |---|---|---|
 |foto|Gustavo Mirapalheta</br>(Exploratory Data Analysis)|:octocat: [https://github.com/ldaniel/Exploratory-Data-Analysis]|
 |foto|João Rafael Dias</br>(Predictive Analytics)|:octocat: [https://github.com/ldaniel/Predictive-Analytics]|
